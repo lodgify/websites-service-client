@@ -27,6 +27,7 @@ In this case we can use travis-ci to manage the building and releasing of the pr
 - Navigate to the settings page of that project and add two environment variables
 - `NPM_TOKEN` [guide on how to get that token](https://docs.npmjs.com/creating-and-viewing-authentication-tokens)
 - `GH_TOKEN` [guide on how to get that token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) (note: the scope `repo` is the only one required to be selected)
+- Make sure you are allowed to publish packages to the `@lodgify` scope
 
 #### It's private
 In this case you'll have to delete the `.travis.yml` and replace it for a `Jenkinsfile`
