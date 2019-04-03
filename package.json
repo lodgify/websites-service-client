@@ -3,6 +3,15 @@
   "version": "0.0.1",
   "description": "A boilerplate for quickly starting a JavaScript project.",
   "main": "lib/index.js",
+  "config": {
+    "jest_config": "tools/jest/jest.config.js",
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build:js": "BABEL_ENV=production babel src/ -d lib/",
     "build": "npm run clean && npm run build:js",
