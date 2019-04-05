@@ -1,4 +1,4 @@
-# Lodgify project boilerplate (JavaScript)
+# Node package boilerplate
 This boilerplate is for quickly building and releasing a project as an NPM package. It comes with the following packages:
  - [Babel](https://babeljs.io/docs/en/)
  - [Eslint](https://eslint.org/docs/user-guide/getting-started) and [@lodgify/eslint-config](https://www.npmjs.com/package/@lodgify/eslint-config)
@@ -6,7 +6,7 @@ This boilerplate is for quickly building and releasing a project as an NPM packa
  - [Commitizen](https://www.npmjs.com/package/commitizen)
  - [Jest](https://www.npmjs.com/package/jest)
 
-## Gettings started.
+## Getting started.
 - Download this repository, unzip and rename the folder to that of the project
 - Create a git repository
 - Edit the `package.json` to fit with your project
