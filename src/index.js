@@ -3,20 +3,20 @@ export {
   AVAILABILITY_NOT_AVAILABLE,
   AVAILABILITY_CHECK_IN,
   AVAILABILITY_CHECK_OUT,
-} from './websites-service-client/index';
-export { postCallMeBack } from './websites-service-client/index';
-export { postContact } from './websites-service-client/index';
-export { getCurrencies } from './websites-service-client/index';
-export { postModel } from './websites-service-client/index';
-export { getImage } from './websites-service-client/index';
-export { getLocalization } from './websites-service-client/index';
-export { getPayments } from './websites-service-client/index';
-export { getPromotion } from './websites-service-client/index';
-export { getRates } from './websites-service-client/index';
-export { postRecoverPassword } from './websites-service-client/index';
-export { getReviews, postReview } from './websites-service-client/index';
-export { getRoomType } from './websites-service-client/index';
-export { postSignup } from './websites-service-client/index';
-export { getTimeOptions } from './websites-service-client/index';
-export { getTranslations } from './websites-service-client/index';
-export { LOGIN_REDIRECT_URL } from './websites-service-client/index';
+} from './availability';
+export { postCallMeBack } from './callmeback';
+export { postContact } from './contact';
+export { getCurrencies } from './currencies';
+export { postModel } from './model';
+export { getImage } from './image';
+export { getLocalization } from './localization';
+export { getPayments } from './payments';
+export { getPromotion } from './promotion';
+export { getRates } from './rates';
+export { postRecoverPassword } from './recoverpassword';
+export { getReviews, postReview } from './reviews';
+export { getRoomType } from './roomtype';
+export { postSignup } from './signup';
+export { getTimeOptions } from './timeoptions';
+export { getTranslations } from './translations';
+export { LOGIN_REDIRECT_URL } from './constants';
