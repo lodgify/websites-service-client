@@ -1,6 +1,6 @@
 import { postJSON } from '@lodgify/fetch-related-utils';
 
-import { ORIGIN } from '../../constants';
+import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';
 
 import { getPathname } from './utils/getPathname';

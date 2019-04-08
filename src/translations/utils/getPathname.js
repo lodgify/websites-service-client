@@ -1,5 +1,5 @@
 import { LANGUAGE_CODE_PLACEHOLDER, PATHNAME } from '../constants';
-import { WEBSITE_ID_PLACEHOLDER } from '../../../constants';
+import { WEBSITE_ID_PLACEHOLDER } from '../../constants';
 
 /**
  * @param  {number} websiteId

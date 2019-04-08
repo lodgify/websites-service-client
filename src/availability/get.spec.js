@@ -10,7 +10,7 @@ import {
 } from '@lodgify/fetch-related-utils';
 import { getQueryString } from '@lodgify/get-query-string';
 
-import { ORIGIN } from '../../constants';
+import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';
 
 import { getPathname } from './utils/getPathname';

@@ -1,4 +1,4 @@
-import { BASE_PATH_FRAGMENT } from '../../constants';
+import { BASE_PATH_FRAGMENT } from '../constants';
 
 export const RESOURCE_NAME = 'image';
 

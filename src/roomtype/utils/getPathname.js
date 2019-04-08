@@ -1,4 +1,4 @@
-import { PROPERTY_ID_PLACEHOLDER } from '../../../constants';
+import { PROPERTY_ID_PLACEHOLDER } from '../../constants';
 import { PATHNAME_TEMPLATE } from '../constants';
 
 /**

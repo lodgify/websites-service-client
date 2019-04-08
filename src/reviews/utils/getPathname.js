@@ -1,7 +1,7 @@
 import {
   WEBSITE_ID_PLACEHOLDER,
   PROPERTY_ID_PLACEHOLDER,
-} from '../../../constants';
+} from '../../constants';
 import { PATHNAME_TEMPLATE } from '../constants';
 
 /**

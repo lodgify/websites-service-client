@@ -2,7 +2,7 @@ import {
   BASE_PATH_FRAGMENT,
   WEBSITE_ID_PATH_FRAGMENT,
   LANGUAGE_CODE_FRAGMENT,
-} from '../../constants';
+} from '../constants';
 
 export const RESOURCE_NAME = 'promotion';
 

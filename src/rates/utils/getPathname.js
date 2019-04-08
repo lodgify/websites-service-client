@@ -4,7 +4,7 @@ import {
   PROPERTY_ID_PLACEHOLDER,
   ROOM_TYPE_ID_PATH_FRAGMENT,
   ROOM_TYPE_ID_PLACEHOLDER,
-} from '../../../constants';
+} from '../../constants';
 import { PATHNAME_TEMPLATE } from '../constants';
 
 /**

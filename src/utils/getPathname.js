@@ -1,4 +1,4 @@
-import { WEBSITE_ID_PLACEHOLDER } from '../../constants';
+import { WEBSITE_ID_PLACEHOLDER } from '../constants';
 
 /**
  * @param  {string} pathnameTemplate
