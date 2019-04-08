@@ -1,5 +1,5 @@
 {
-  "name": "@lodgify/websites-service-client",
+  "name": "@lodgify/websites-services-client",
   "version": "0.0.1",
   "description": "A client for making it easy to interact with the Lodgify websites services 2.0",
   "main": "lib/index.js",
