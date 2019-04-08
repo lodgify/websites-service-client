@@ -31,7 +31,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lodgify/websites-service-client.git"
+    "url": "git+https://github.com/lodgify/websites-services-client.git"
   },
   "keywords": [
     "services"
