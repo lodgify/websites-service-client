@@ -1,38 +1,221 @@
-# Node package boilerplate
-This boilerplate is for quickly building and releasing a project as an NPM package. It comes with the following packages:
- - [Babel](https://babeljs.io/docs/en/)
- - [Eslint](https://eslint.org/docs/user-guide/getting-started) and [@lodgify/eslint-config](https://www.npmjs.com/package/@lodgify/eslint-config)
- - [Semantic release](https://www.npmjs.com/package/semantic-release)
- - [Commitizen](https://www.npmjs.com/package/commitizen)
- - [Jest](https://www.npmjs.com/package/jest)
+# Websites service client
 
-## Getting started.
-- Download this repository, unzip and rename the folder to that of the project
-- Create a git repository
-- Edit the `package.json` to fit with your project
- - `name` (note: the `name` should be scoped by @lodgify)
- - `description`
- - `repository`
- - `keywords`
-- `$ git remote add origin git@github.com:lodgify/REPOSITORY-NAME`
-- `$ npm install`
-- You are good to go! 👩‍💻 👨‍💻
+A client for making it easy to interact with the Lodgify websites services 2.0
 
-## Deployment
-### Is the project private or public?
-#### It's public
-In this case we can use travis-ci to manage the building and releasing of the project.
-- Log in to [travis](https://travis-ci.org)
-- Add the project to list of repositories
-- Navigate to the settings page of that project and add two environment variables
-- `NPM_TOKEN` [guide on how to get that token](https://docs.npmjs.com/creating-and-viewing-authentication-tokens)
-- `GH_TOKEN` [guide on how to get that token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) (note: the scope `repo` is the only one required to be selected)
-- Make sure you are allowed to publish packages to the `@lodgify` scope
+## Install
 
-#### It's private
-In this case you'll have to delete the `.travis.yml` and replace it for a `Jenkinsfile`
+`$ npm install @lodgify/websites-services-client`
 
-## Once your project is working as expected
- - Edit `docs/CONTRIBUTING.md` [example](https://github.com/lodgify/lodgify-ui/blob/master/docs/CONTRIBUTING.md).
- - Edit `docs/CONVENTIONS.md` [example](https://github.com/lodgify/lodgify-ui/blob/master/docs/CONVENTIONS.md).
- - Finally replace this Readme with one appropriate to your project and then you are DONE! [example](https://github.com/lodgify/lodgify-ui/blob/master/Readme.md).
+## Usage
+
+### getAvailability
+```js
+import { getAvailability } from '@lodgify/website-services-client';
+
+const propertyId = 123;
+const websiteId = 456;
+const roomTypeId = 897;
+
+const startDate = '2018-12-1';
+const numberOfGuests = '1';
+const numberOfMonths = '4';
+
+getAvailability(
+  startDate,
+  numberOfGuests,
+  numberOfMonths,
+  websiteId,
+  propertyId,
+  roomTypeId
+);
+```
+
+### postCallMeBack
+```js
+import { postCallMeBack } from '@lodgify/website-services-client';
+
+const websiteId = 123;
+const formValues = '📝';
+const reCaptchaToken = '🔴';
+
+postCallMeBack(
+  websiteId,
+  formValues,
+  reCaptchaToken
+);
+```
+
+### postContact
+```js
+import { postContact } from '@lodgify/website-services-client';
+
+const websiteId = 123;
+const formValues = '📝';
+const reCaptchaToken = '🔴';
+
+postContact(
+  websiteId,
+  formValues,
+  reCaptchaToken
+);
+```
+
+### getCurrencies
+```js
+import { getCurrencies } from '@lodgify/website-services-client';
+
+const currencies = getCurrencies();
+```
+
+### getImage
+```js
+import { getImage } from '@lodgify/website-services-client';
+
+const imageId = 'c3b2a1';
+
+getImage(imageId);
+```
+
+### getLocalization
+```js
+import { getLocalization } from '@lodgify/website-services-client';
+
+const localization = getLocalization();
+```
+
+### postModel
+```js
+import { getLocalization } from '@lodgify/website-services-client';
+
+const host = 'someHost';
+const path = 'someUrl';
+
+getLocalization(
+  host,
+  path
+);
+```
+
+### getPayments
+```js
+import { getPayments } from '@lodgify/website-services-client';
+
+const propertyId = '1100';
+const websiteId = '0011';
+
+getPayments(
+  propertyId,
+  websiteId
+);
+```
+
+### getPromotion
+```js
+import { getPromotion } from '@lodgify/website-services-client';
+
+const websiteId = '321';
+const languageCode = 'en';
+
+getPromotion(
+  websiteId,
+  languageCode
+);
+```
+
+### getRates
+```js
+import { getRates } from '@lodgify/website-services-client';
+
+const propertyId = 123;
+const roomTypeId = 987;
+const websiteId = 456;
+
+const addOns = 'someAddOns';
+const endDate = 'someEndDate';
+const numberOfGuests = 'someNumberOfGuests';
+const promotionCode = 'somePromotionCode';
+const startDate = 'someStartDate';
+
+const query = { addOns, endDate, numberOfGuests, promotionCode, startDate };
+
+getRates(
+  query,
+  websiteId,
+  propertyId,
+  roomTypeId
+);
+```
+
+### postRecoverPassword
+```js
+import { postRecoverPassword } from '@lodgify/website-services-client';
+
+const websiteId = 123;
+const formValues = '📝';
+
+postRecoverPassword(
+  websiteId,
+  languageCode
+);
+```
+
+### getReviews
+```js
+import { getReviews } from '@lodgify/website-services-client';
+
+const websiteId = 176;
+const propertyId = 198;
+const page = 300;
+const count = 400;
+
+getReviews(
+  websiteId,
+  propertyId,
+  { page, count }
+);
+```
+
+### getRoomType
+```js
+import { getRoomType } from '@lodgify/website-services-client';
+
+
+const propertyId = 123;
+
+getRoomType(propertyId);
+```
+
+### postSignUp
+```js
+import { postSignUp } from '@lodgify/website-services-client';
+
+
+const websiteId = 123;
+const formValues = '📝';
+
+postSignUp(
+  websiteId,
+  formValues
+);
+```
+
+### getTimeOptions
+```js
+import { getTimeOptions } from '@lodgify/website-services-client';
+
+const timeOptions = getTimeOptions();
+```
+
+### getTranslations
+```js
+import { getTranslations } from '@lodgify/website-services-client';
+
+const websiteId = 1928;
+const languageCode = 'it';
+
+getTranslations(websiteId, language);
+```
+
+## Contributing
+
+See [contributing](https://github.com/lodgify/identity-server-client/blob/master/docs/CONTRIBUTING.md).

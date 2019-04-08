@@ -1,0 +1,3 @@
+import { BASE_PATH_FRAGMENT, PROPERTY_ID_PATH_FRAGMENT } from '../../constants';
+
+export const PATHNAME_TEMPLATE = `${BASE_PATH_FRAGMENT}/roomtype${PROPERTY_ID_PATH_FRAGMENT}`;

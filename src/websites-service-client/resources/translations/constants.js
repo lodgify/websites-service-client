@@ -1,0 +1,5 @@
+import { BASE_PATH_FRAGMENT, WEBSITE_ID_PATH_FRAGMENT } from '../../constants';
+
+export const LANGUAGE_CODE_PLACEHOLDER = ':languageCode';
+
+export const PATHNAME = `${BASE_PATH_FRAGMENT}/translation${WEBSITE_ID_PATH_FRAGMENT}/${LANGUAGE_CODE_PLACEHOLDER}`;
