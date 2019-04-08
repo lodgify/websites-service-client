@@ -1,4 +1,4 @@
-import { postJSON } from '@lodgify/isomorphic-fetch-helpers';
+import { postJSON } from '@lodgify/fetch-related-utils';
 
 import { ORIGIN } from '../../constants';
 import { getUrl } from '../utils/getUrl';

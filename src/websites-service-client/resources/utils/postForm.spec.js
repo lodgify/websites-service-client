@@ -1,4 +1,4 @@
-jest.mock('@lodgify/isomorphic-fetch-helpers');
+jest.mock('@lodgify/fetch-related-utils');
 jest.mock('./getUrl');
 jest.mock('./getPathname');
 jest.mock('./getPostFormHeaders');
@@ -7,7 +7,7 @@ import {
   postJSON,
   // eslint-disable-next-line import/named
   postJSONReturnValue,
-} from '@lodgify/isomorphic-fetch-helpers';
+} from '@lodgify/fetch-related-utils';
 
 import { ORIGIN } from '../../constants';
 
