@@ -34,12 +34,7 @@
     "url": "git+https://github.com/lodgify/websites-service-client.git"
   },
   "keywords": [
-    "javascript",
-    "boilerplate",
-    "eslint",
-    "babel",
-    "semantic-release",
-    "commitizen"
+    "services"
   ],
   "author": "Lodgify",
   "license": "MIT",
