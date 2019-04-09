@@ -1,4 +1,4 @@
-import { getJSON } from '@lodgify/fetch-related-utils';
+import { getJSON } from '@lodgify/fetch-helpers';
 import { getQueryString } from '@lodgify/get-query-string';
 
 import { ORIGIN } from '../constants';

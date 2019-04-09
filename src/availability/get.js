@@ -1,5 +1,5 @@
 import { getQueryString } from '@lodgify/get-query-string';
-import { getJSON } from '@lodgify/fetch-related-utils';
+import { getJSON } from '@lodgify/fetch-helpers';
 
 import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';

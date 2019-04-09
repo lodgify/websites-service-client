@@ -1,4 +1,4 @@
-jest.mock('@lodgify/fetch-related-utils');
+jest.mock('@lodgify/fetch-helpers');
 jest.mock('./utils/getPathname');
 jest.mock('../utils/getUrl');
 
@@ -6,7 +6,7 @@ import {
   getJSON,
   // eslint-disable-next-line import/named
   getJSONReturnValue,
-} from '@lodgify/fetch-related-utils';
+} from '@lodgify/fetch-helpers';
 
 import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';
