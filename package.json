@@ -1,7 +1,7 @@
 {
-  "name": "@lodgify/websites-services-client",
+  "name": "@lodgify/websites-service-client",
   "version": "0.0.1",
-  "description": "A client for making it easy to interact with the Lodgify websites services 2.0",
+  "description": "A client for making it easy to interact with the Lodgify websites service 2.0",
   "main": "lib/index.js",
   "config": {
     "jest_config": "tools/jest/jest.config.js",
@@ -31,10 +31,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lodgify/websites-services-client.git"
+    "url": "git+https://github.com/lodgify/websites-service-client.git"
   },
   "keywords": [
-    "services"
+    "websites",
+    "service"
   ],
   "author": "Lodgify",
   "license": "MIT",
