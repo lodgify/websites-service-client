@@ -65,7 +65,7 @@
     "semantic-release": "^15.13.3"
   },
   "dependencies": {
-    "@lodgify/fetch-related-utils": "^1.0.4",
+    "@lodgify/fetch-helpers": "^1.1.2",
     "@lodgify/get-query-string": "^1.1.0"
   }
 }
