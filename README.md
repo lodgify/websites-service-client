@@ -1,16 +1,16 @@
 # Websites service client
 
-A client for making it easy to interact with the Lodgify websites services 2.0
+A client for making it easy to interact with the Lodgify websites service 2.0
 
 ## Install
 
-`$ npm install @lodgify/websites-services-client`
+`$ npm install @lodgify/websites-service-client`
 
 ## Usage
 
 ### getAvailability
 ```js
-import { getAvailability } from '@lodgify/website-services-client';
+import { getAvailability } from '@lodgify/website-service-client';
 
 const propertyId = 123;
 const websiteId = 456;
@@ -32,7 +32,7 @@ getAvailability(
 
 ### postCallMeBack
 ```js
-import { postCallMeBack } from '@lodgify/website-services-client';
+import { postCallMeBack } from '@lodgify/website-service-client';
 
 const websiteId = 123;
 const formValues = '📝';
@@ -47,7 +47,7 @@ postCallMeBack(
 
 ### postContact
 ```js
-import { postContact } from '@lodgify/website-services-client';
+import { postContact } from '@lodgify/website-service-client';
 
 const websiteId = 123;
 const formValues = '📝';
@@ -62,14 +62,14 @@ postContact(
 
 ### getCurrencies
 ```js
-import { getCurrencies } from '@lodgify/website-services-client';
+import { getCurrencies } from '@lodgify/website-service-client';
 
 const currencies = getCurrencies();
 ```
 
 ### getImage
 ```js
-import { getImage } from '@lodgify/website-services-client';
+import { getImage } from '@lodgify/website-service-client';
 
 const imageId = 'c3b2a1';
 
@@ -78,14 +78,14 @@ getImage(imageId);
 
 ### getLocalization
 ```js
-import { getLocalization } from '@lodgify/website-services-client';
+import { getLocalization } from '@lodgify/website-service-client';
 
 const localization = getLocalization();
 ```
 
 ### postModel
 ```js
-import { getLocalization } from '@lodgify/website-services-client';
+import { getLocalization } from '@lodgify/website-service-client';
 
 const host = 'someHost';
 const path = 'someUrl';
@@ -98,7 +98,7 @@ getLocalization(
 
 ### getPayments
 ```js
-import { getPayments } from '@lodgify/website-services-client';
+import { getPayments } from '@lodgify/website-service-client';
 
 const propertyId = '1100';
 const websiteId = '0011';
@@ -111,7 +111,7 @@ getPayments(
 
 ### getPromotion
 ```js
-import { getPromotion } from '@lodgify/website-services-client';
+import { getPromotion } from '@lodgify/website-service-client';
 
 const websiteId = '321';
 const languageCode = 'en';
@@ -124,7 +124,7 @@ getPromotion(
 
 ### getRates
 ```js
-import { getRates } from '@lodgify/website-services-client';
+import { getRates } from '@lodgify/website-service-client';
 
 const propertyId = 123;
 const roomTypeId = 987;
@@ -148,7 +148,7 @@ getRates(
 
 ### postRecoverPassword
 ```js
-import { postRecoverPassword } from '@lodgify/website-services-client';
+import { postRecoverPassword } from '@lodgify/website-service-client';
 
 const websiteId = 123;
 const formValues = '📝';
@@ -161,7 +161,7 @@ postRecoverPassword(
 
 ### getReviews
 ```js
-import { getReviews } from '@lodgify/website-services-client';
+import { getReviews } from '@lodgify/website-service-client';
 
 const websiteId = 176;
 const propertyId = 198;
@@ -177,7 +177,7 @@ getReviews(
 
 ### getRoomType
 ```js
-import { getRoomType } from '@lodgify/website-services-client';
+import { getRoomType } from '@lodgify/website-service-client';
 
 
 const propertyId = 123;
@@ -187,7 +187,7 @@ getRoomType(propertyId);
 
 ### postSignUp
 ```js
-import { postSignUp } from '@lodgify/website-services-client';
+import { postSignUp } from '@lodgify/website-service-client';
 
 
 const websiteId = 123;
@@ -201,14 +201,14 @@ postSignUp(
 
 ### getTimeOptions
 ```js
-import { getTimeOptions } from '@lodgify/website-services-client';
+import { getTimeOptions } from '@lodgify/website-service-client';
 
 const timeOptions = getTimeOptions();
 ```
 
 ### getTranslations
 ```js
-import { getTranslations } from '@lodgify/website-services-client';
+import { getTranslations } from '@lodgify/website-service-client';
 
 const websiteId = 1928;
 const languageCode = 'it';
