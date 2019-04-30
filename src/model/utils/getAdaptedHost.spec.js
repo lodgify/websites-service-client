@@ -1,19 +1,19 @@
 import { getAdaptedHost } from './getAdaptedHost';
 
 describe('utils/getAdaptedHost', () => {
-  it('should return the correct host for localhost', () => {
-    const host = 'localhost:5050';
+  describe('if `host` includes `localhost:`', () => {
+    it('should return the right string', () => {
+      const actual = getAdaptedHost('something.localhost:8080');
 
-    const actual = getAdaptedHost(host);
-
-    expect(actual).toBe('npreview-mos-eisley.lodgifyintegration.com');
+      expect(actual).toBe('something.lodgifyintegration.com');
+    });
   });
 
-  it('should return the correct host if not localhost', () => {
-    const host = 'npreview-julio-x-livingstone-2.lodgifystaging.com';
+  describe('if `host` does not include `localhost:`', () => {
+    it('should return the right string', () => {
+      const actual = getAdaptedHost('something.lodgify.com');
 
-    const actual = getAdaptedHost(host);
-
-    expect(actual).toBe('npreview-julio-x-livingstone-2.lodgifystaging.com');
+      expect(actual).toBe('something.lodgify.com');
+    });
   });
 });
