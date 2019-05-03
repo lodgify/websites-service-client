@@ -17,6 +17,7 @@ export { postRecoverPassword } from './recoverpassword';
 export { getReviews, postReview } from './reviews';
 export { getRoomType } from './roomtype';
 export { postSignup } from './signup';
+export { postSubscribe } from './subscribe';
 export { getTimeOptions } from './timeoptions';
 export { getTranslations } from './translations';
 export { LOGIN_REDIRECT_URL } from './constants';

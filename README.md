@@ -199,6 +199,21 @@ postSignUp(
 );
 ```
 
+### postSubscribe
+```js
+import { postSubscribe } from '@lodgify/website-service-client';
+
+const websiteId = 123;
+const language = 'en';
+const formValues = '📝';
+
+postSubscribe(
+  websiteId,
+  language,
+  formValues,
+);
+```
+
 ### getTimeOptions
 ```js
 import { getTimeOptions } from '@lodgify/website-service-client';
