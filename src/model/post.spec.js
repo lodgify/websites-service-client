@@ -20,6 +20,7 @@ const { post } = require('./post');
 
 const host = 'someHost';
 const path = 'someUrl';
+const cookie = 'someCookie';
 
 const URL = 'URL';
 const ADAPTED_PATH = 'ADAPTED_PATH';
@@ -31,7 +32,7 @@ getAdaptedHost.mockImplementation(() => ADAPTED_HOST);
 
 describe(`${PATHNAME}/post`, () => {
   beforeAll(() => {
-    post(host, path);
+    post(host, path, cookie);
   });
 
   it('should call `getUrl` with the correct arguments', () => {
@@ -47,10 +48,16 @@ describe(`${PATHNAME}/post`, () => {
   });
 
   it('should call `postJSON` with the correct arguments', () => {
-    expect(postJSON).toHaveBeenCalledWith(URL, {
-      host: ADAPTED_HOST,
-      path: ADAPTED_PATH,
-    });
+    expect(postJSON).toHaveBeenCalledWith(
+      URL,
+      {
+        host: ADAPTED_HOST,
+        path: ADAPTED_PATH,
+      },
+      {
+        Cookie: cookie,
+      }
+    );
   });
 
   it('should return whatever `postJSON` returns', () => {

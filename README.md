@@ -85,14 +85,16 @@ const localization = getLocalization();
 
 ### postModel
 ```js
-import { getLocalization } from '@lodgify/website-service-client';
+import { postModel } from '@lodgify/website-service-client';
 
 const host = 'someHost';
 const path = 'someUrl';
+const cookie = 'cookie=somevalue;';
 
-getLocalization(
+postModel(
   host,
-  path
+  path,
+  cookie
 );
 ```
 
