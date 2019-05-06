@@ -10,15 +10,20 @@ import { getAdaptedHost } from './utils/getAdaptedHost';
 /**
  * @param  {string} host
  * @param  {string} path
+ * @param  {string} cookie
  * @return {Promise}
  */
-export const post = (host, path) => {
+export const post = (host, path, cookie) => {
   const url = getUrl(ORIGIN, PATHNAME);
   const adaptedPath = getAdaptedPath(path);
   const adaptedHost = getAdaptedHost(host);
 
-  return postJSON(url, {
-    host: adaptedHost,
-    path: adaptedPath,
-  });
+  return postJSON(
+    url,
+    {
+      host: adaptedHost,
+      path: adaptedPath,
+    },
+    { Cookie: cookie }
+  );
 };
