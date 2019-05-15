@@ -194,10 +194,12 @@ import { postSignUp } from '@lodgify/website-service-client';
 
 const websiteId = 123;
 const formValues = '📝';
+const reCaptchaToken = '🔴';
 
 postSignUp(
   websiteId,
-  formValues
+  formValues,
+  reCaptchaToken
 );
 ```
 
