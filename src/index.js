@@ -10,6 +10,7 @@ export { getCurrencies } from './currencies';
 export { postModel } from './model';
 export { getImage } from './image';
 export { getLocalization } from './localization';
+export { getLocations } from './locations';
 export { getPayments } from './payments';
 export { getPromotion } from './promotion';
 export { getRates } from './rates';
