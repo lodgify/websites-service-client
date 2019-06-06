@@ -83,6 +83,15 @@ import { getLocalization } from '@lodgify/website-service-client';
 const localization = getLocalization();
 ```
 
+### getLocations
+```js
+import { getLocations } from '@lodgify/website-service-client';
+
+const websiteId = 0121
+
+getLocations(websiteId);
+```
+
 ### postModel
 ```js
 import { postModel } from '@lodgify/website-service-client';
