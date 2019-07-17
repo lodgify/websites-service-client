@@ -1,5 +1,7 @@
-import { postForm } from './../utils/postForm';
-import { PATHNAME_TEMPLATE } from './constants';
+import { postForm } from '../utils/postForm';
+import { setFunctionName } from '../utils/setFunctionName';
+
+import { PATHNAME_TEMPLATE, RESOURCE_NAME } from './constants';
 
 /**
  * @param  {number} websiteId
@@ -9,3 +11,5 @@ import { PATHNAME_TEMPLATE } from './constants';
  */
 export const post = (websiteId, formValues, reCaptchaToken) =>
   postForm(PATHNAME_TEMPLATE, websiteId, formValues, reCaptchaToken);
+
+setFunctionName(post, RESOURCE_NAME);

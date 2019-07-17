@@ -1,10 +1,12 @@
-jest.mock('./../utils/postForm');
+jest.mock('../utils/postForm');
+jest.mock('../utils/setFunctionName');
 
 import { postForm } from '../utils/postForm';
+import { setFunctionName } from '../utils/setFunctionName';
 
 import { adaptFormValues } from './utils/adaptFormValues';
 import { post } from './post';
-import { PATHNAME_TEMPLATE } from './constants';
+import { PATHNAME_TEMPLATE, RESOURCE_NAME } from './constants';
 
 const websiteId = 123;
 const formValues = '📝';
@@ -20,5 +22,9 @@ describe(`POST contact`, () => {
       adaptFormValues(formValues),
       reCaptchaToken
     );
+  });
+
+  it('should call `setFunctionName` with the right arguments', () => {
+    expect(setFunctionName).toHaveBeenCalledWith(post, RESOURCE_NAME);
   });
 });
