@@ -2,8 +2,9 @@ import { postJSON } from '@lodgify/fetch-helpers';
 
 import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';
+import { setFunctionName } from '../utils/setFunctionName';
 
-import { PATHNAME } from './constants';
+import { PATHNAME, RESOURCE_NAME } from './constants';
 import { getAdaptedPath } from './utils/getAdaptedPath';
 import { getAdaptedHost } from './utils/getAdaptedHost';
 
@@ -27,3 +28,5 @@ export const post = (host, path, cookie) => {
     { Cookie: cookie }
   );
 };
+
+setFunctionName(post, RESOURCE_NAME);

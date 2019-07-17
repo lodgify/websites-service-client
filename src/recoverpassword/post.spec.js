@@ -1,9 +1,11 @@
-jest.mock('./../utils/postForm');
+jest.mock('../utils/postForm');
+jest.mock('../utils/setFunctionName');
 
 import { postForm } from '../utils/postForm';
+import { setFunctionName } from '../utils/setFunctionName';
 
 import { post } from './post';
-import { PATHNAME_TEMPLATE } from './constants';
+import { PATHNAME_TEMPLATE, RESOURCE_NAME } from './constants';
 
 const websiteId = 123;
 const formValues = '📝';
@@ -17,5 +19,9 @@ describe(`POST signup`, () => {
       websiteId,
       formValues
     );
+  });
+
+  it('should call `setFunctionName` with the right arguments', () => {
+    expect(setFunctionName).toHaveBeenCalledWith(post, RESOURCE_NAME);
   });
 });

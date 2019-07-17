@@ -2,6 +2,7 @@ jest.mock('@lodgify/get-query-string');
 jest.mock('@lodgify/fetch-helpers');
 jest.mock('./utils/getPathname');
 jest.mock('../utils/getUrl');
+jest.mock('../utils/setFunctionName');
 
 import {
   getJSON,
@@ -12,9 +13,11 @@ import { getQueryString } from '@lodgify/get-query-string';
 
 import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';
+import { setFunctionName } from '../utils/setFunctionName';
 
 import { getPathname } from './utils/getPathname';
 import { get } from './get';
+import { RESOURCE_NAME } from './constants';
 
 const propertyId = 123;
 const websiteId = 456;
@@ -68,5 +71,9 @@ describe(`GET availability`, () => {
     const actual = get();
 
     expect(actual).toBe(getJSONReturnValue);
+  });
+
+  it('should call `setFunctionName` with the right arguments', () => {
+    expect(setFunctionName).toHaveBeenCalledWith(get, RESOURCE_NAME);
   });
 });

@@ -2,8 +2,9 @@ import { getJSON } from '@lodgify/fetch-helpers';
 
 import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';
+import { setFunctionName } from '../utils/setFunctionName';
 
-import { PATHNAME } from './constants';
+import { PATHNAME, RESOURCE_NAME } from './constants';
 
 /**
  * @return {Promise}
@@ -13,3 +14,5 @@ export const get = () => {
 
   return getJSON(url);
 };
+
+setFunctionName(get, RESOURCE_NAME);

@@ -1,15 +1,17 @@
 jest.mock('@lodgify/fetch-helpers');
 jest.mock('./utils/getPathname');
 jest.mock('../utils/getUrl');
+jest.mock('../utils/setFunctionName');
 
 import { postJSON } from '@lodgify/fetch-helpers';
 
 import { getUrl } from '../utils/getUrl';
 import { ORIGIN } from '../constants';
+import { setFunctionName } from '../utils/setFunctionName';
 
 import { post } from './post';
 import { getPathname } from './utils/getPathname';
-import { PATHNAME_TEMPLATE } from './constants';
+import { PATHNAME_TEMPLATE, RESOURCE_NAME } from './constants';
 
 const PATHNAME = '🛣';
 const URL = '🔗';
@@ -37,5 +39,9 @@ describe(`postSubscribe`, () => {
 
   it('should call `postForm` with the correct arguments', () => {
     expect(postJSON).toHaveBeenCalledWith(URL, formValues);
+  });
+
+  it('should call `setFunctionName` with the right arguments', () => {
+    expect(setFunctionName).toHaveBeenCalledWith(post, RESOURCE_NAME);
   });
 });

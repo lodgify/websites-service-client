@@ -1,5 +1,6 @@
 jest.mock('@lodgify/fetch-helpers');
 jest.mock('../utils/getUrl');
+jest.mock('../utils/setFunctionName');
 
 import {
   getJSON,
@@ -9,8 +10,9 @@ import {
 
 import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';
+import { setFunctionName } from '../utils/setFunctionName';
 
-import { PATHNAME } from './constants';
+import { PATHNAME, RESOURCE_NAME } from './constants';
 import { get } from './get';
 
 const URL = 'url';
@@ -34,5 +36,9 @@ describe(`GET staticdata/timeoptions`, () => {
     const actual = get();
 
     expect(actual).toBe(getJSONReturnValue);
+  });
+
+  it('should call `setFunctionName` with the right arguments', () => {
+    expect(setFunctionName).toHaveBeenCalledWith(get, RESOURCE_NAME);
   });
 });

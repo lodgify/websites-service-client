@@ -2,6 +2,7 @@ jest.mock('@lodgify/fetch-helpers');
 jest.mock('../utils/getUrl');
 jest.mock('./utils/getAdaptedPath');
 jest.mock('./utils/getAdaptedHost');
+jest.mock('../utils/setFunctionName');
 
 import {
   postJSON,
@@ -11,8 +12,9 @@ import {
 
 import { ORIGIN } from '../constants';
 import { getUrl } from '../utils/getUrl';
+import { setFunctionName } from '../utils/setFunctionName';
 
-import { PATHNAME } from './constants';
+import { PATHNAME, RESOURCE_NAME } from './constants';
 import { getAdaptedHost } from './utils/getAdaptedHost';
 import { getAdaptedPath } from './utils/getAdaptedPath';
 
@@ -64,5 +66,9 @@ describe(`${PATHNAME}/post`, () => {
     const actual = post();
 
     expect(actual).toBe(postJSONReturnValue);
+  });
+
+  it('should call `setFunctionName` with the right arguments', () => {
+    expect(setFunctionName).toHaveBeenCalledWith(post, RESOURCE_NAME);
   });
 });
