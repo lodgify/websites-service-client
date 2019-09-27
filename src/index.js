@@ -14,6 +14,7 @@ export { getLocalization } from './localization';
 export { getLocations } from './locations';
 export { getPayments } from './payments';
 export { getPromotion } from './promotion';
+export { getProperties } from './properties';
 export { getRates } from './rates';
 export { postRecoverPassword } from './recoverpassword';
 export { getReviews, postReview } from './reviews';
