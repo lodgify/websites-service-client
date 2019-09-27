@@ -133,6 +133,21 @@ getPromotion(
 );
 ```
 
+### getProperties
+```js
+import { getProperties } from '@lodgify/websites-service-client';
+
+const websiteId = '321';
+const propertyId = '123';
+const languageCode = 'en';
+
+getProperties(
+  websiteId,
+  propertyId,
+  languageCode
+);
+```
+
 ### getRates
 ```js
 import { getRates } from '@lodgify/websites-service-client';
