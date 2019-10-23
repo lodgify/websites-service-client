@@ -16,17 +16,17 @@ import { RESOURCE_NAME } from './constants';
  * @param  {string} query.promotionCode
  * @param  {string} query.startDate
  * @param  {number} websiteId
+ * @param  {string} [languageCode]
  * @param  {number} [propertyId]
- * @param  {number} [roomTypeId]
  * @return {Promise}
  */
 export const get = (
   { addOns, endDate, numberOfGuests, promotionCode, startDate },
   websiteId,
-  propertyId,
-  roomTypeId
+  languageCode,
+  propertyId
 ) => {
-  const pathname = getPathname(websiteId, propertyId, roomTypeId);
+  const pathname = getPathname(websiteId, languageCode, propertyId);
   const queryString = getQueryString({
     AddOns: addOns,
     Arrival: startDate,
