@@ -20,7 +20,7 @@ import { get } from './get';
 import { RESOURCE_NAME } from './constants';
 
 const propertyId = 123;
-const roomTypeId = 987;
+const languageCode = 'kr';
 const websiteId = 456;
 
 const addOns = 'someAddOns';
@@ -39,13 +39,17 @@ getPathname.mockImplementation(() => PATHNAME);
 getQueryString.mockImplementation(() => QUERY);
 getUrl.mockImplementation(() => URL);
 
-describe(`GET availability`, () => {
+describe(`GET rates`, () => {
   beforeAll(() => {
-    get(query, websiteId, propertyId, roomTypeId);
+    get(query, websiteId, languageCode, propertyId);
   });
 
   it('should call `getPathname` with the correct arguments', () => {
-    expect(getPathname).toHaveBeenCalledWith(websiteId, propertyId, roomTypeId);
+    expect(getPathname).toHaveBeenCalledWith(
+      websiteId,
+      languageCode,
+      propertyId
+    );
   });
 
   it('should call `getQueryString` with the correct arguments', () => {
@@ -67,7 +71,7 @@ describe(`GET availability`, () => {
   });
 
   it('should return whatever `getJSON` returns', () => {
-    const actual = get(query, websiteId, propertyId, roomTypeId);
+    const actual = get(query, websiteId, languageCode, propertyId);
 
     expect(actual).toBe(getJSONReturnValue);
   });
