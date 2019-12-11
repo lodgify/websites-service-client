@@ -19,6 +19,7 @@ export { getRates } from './rates';
 export { postRecoverPassword } from './recoverpassword';
 export { getReviews, postReview } from './reviews';
 export { getRoomType } from './roomtype';
+export { getSearchFilters } from './searchfilters';
 export { postSignup } from './signup';
 export { postSubscribe } from './subscribe';
 export { getTimeOptions } from './timeoptions';

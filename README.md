@@ -211,6 +211,15 @@ const propertyId = 123;
 getRoomType(propertyId);
 ```
 
+### getSearchFilters
+```js
+import { getSearchFilters } from '@lodgify/websites-service-client';
+
+const websiteId = 321;
+
+getSearchFilters(websiteId);
+```
+
 ### postSignUp
 ```js
 import { postSignUp } from '@lodgify/websites-service-client';
