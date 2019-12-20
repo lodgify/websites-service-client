@@ -1,8 +1,7 @@
 const PROTOCOL = 'https://';
-const SUBDOMAIN = 'websiteserver.';
 const DOMAIN = global.process.env.WEBSITES_SERVICE_HOST;
 
-export const ORIGIN = `${PROTOCOL}${SUBDOMAIN}${DOMAIN}`;
+export const ORIGIN = global.process.env.WEBSITES_SERVICE_URL;
 
 export const BASE_PATH_FRAGMENT = '/v2/websites';
 
