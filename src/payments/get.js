@@ -10,10 +10,11 @@ import { RESOURCE_NAME } from './constants';
 /**
  * @param  {number} websiteId
  * @param  {number} propertyId
+ * @param  {string} languageCode
  * @return {Promise}
  */
-export const get = (websiteId, propertyId) => {
-  const pathName = getPathname(websiteId, propertyId);
+export const get = (websiteId, propertyId, languageCode) => {
+  const pathName = getPathname(websiteId, propertyId, languageCode);
   const url = getUrl(ORIGIN, pathName);
 
   return getJSON(url);

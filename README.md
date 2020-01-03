@@ -113,10 +113,12 @@ import { getPayments } from '@lodgify/websites-service-client';
 
 const propertyId = '1100';
 const websiteId = '0011';
+const languageCode = 'en';
 
 getPayments(
+  websiteId,
   propertyId,
-  websiteId
+  languageCode
 );
 ```
 
