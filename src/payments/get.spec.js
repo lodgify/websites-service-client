@@ -22,14 +22,15 @@ getUrl.mockImplementation(() => URL);
 
 const propertyId = '1100';
 const websiteId = '0011';
+const languageCode = 'en';
 
 describe(`GET payments`, () => {
   beforeAll(() => {
-    get(websiteId, propertyId);
+    get(websiteId, propertyId, languageCode);
   });
 
   it('should call `getUrl` with the correct arguments', () => {
-    const pathname = getPathname(websiteId, propertyId);
+    const pathname = getPathname(websiteId, propertyId, languageCode);
 
     expect(getUrl).toHaveBeenCalledWith(ORIGIN, pathname);
   });
